@@ -1,0 +1,5 @@
+0;nao optante;
+5;optante simples;
+7;optante simples;
+6;excluido simples;
+8;excluido simples;

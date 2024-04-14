@@ -1,0 +1,54 @@
+CREATE TABLE `cadastro_fotos` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  'tipo_estabelecimento' varchar(50) DEFAULT '-',
+  'nome_contato' varchar(150) DEFAULT '-',
+  'email_contato' varchar(150) DEFAULT '-',
+  'celular_contato' varchar(50) DEFAULT '-',
+  'nome_fantasia' varchar(100) DEFAULT '-',
+  'cnpj' varchar(15) DEFAULT '-',
+  'fone1' varchar(30) DEFAULT '-',
+  'celular' varchar(30) DEFAULT '-',
+  'whatsapp' varchar(30) DEFAULT '-',
+  'facebook' varchar(50) DEFAULT '-',
+  'instagram' varchar(50) DEFAULT '-',
+  'website' varchar(100) DEFAULT '-',
+  'latitude' varchar(50) DEFAULT '-',
+  'longitude' varchar(50) DEFAULT '-',
+  'logradouro' varchar(255) DEFAULT '-',
+  'numero_logradouro' varchar(10) DEFAULT '-',
+  'obs_logradouro' varchar(20) DEFAULT '-',
+  'cep' varchar(10) DEFAULT '-',
+  'bairro' varchar(150) DEFAULT '-',
+  'cidade' varchar(150) DEFAULT '-',
+  'logo_empresa' varchar(50) DEFAULT '-',
+  'banner_promo' varchar(50) DEFAULT '-',
+  'banner_ofertas' varchar(50) DEFAULT '-',
+  'alias' varchar(150) DEFAULT '-',
+  'plano' varchar(50) DEFAULT '-',
+  'valor_plano' varchar(50) DEFAULT '-',
+  'dia_vencimeto' varchar(50) DEFAULT '-',
+  'status_plano' varchar(50) DEFAULT '-',
+  'dia1_abertura1' varchar(50) DEFAULT '-',
+  'dia2_abertura1' varchar(50) DEFAULT '-',
+  'hora_abertura1' varchar(50) DEFAULT '-',
+  'hora_fechamento1' varchar(50) DEFAULT '-',
+  'dia1_abertura2' varchar(50) DEFAULT '-',
+  'dia2_abertura2' varchar(50) DEFAULT '-',
+  'hora_abertura2' varchar(50) DEFAULT '-',
+  'hora_fechamento2' varchar(50) DEFAULT '-',
+  'dia1_abertura3' varchar(50) DEFAULT '-',
+  'dia2_abertura3' varchar(50) DEFAULT '-',
+  'hora_abertura3' varchar(50) DEFAULT '-',
+  'hora_fechamento3' varchar(50) DEFAULT '-',
+  `data_inc` datetime DEFAULT '0000-00-00 00:00:00',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=23 DEFAULT CHARSET=latin1;
+
+
+insert into cadastro_local (tipo_estabelecimento,nome_fantasia,fone1,celular,whatsapp,facebook,instagram,website,logo_empresa,banner_promo,banner_ofertas) values ('farmacia','farma mais 1','1234567890','0123456789','7890123456','paginafb','@instaadd','website','logo_empresa.jpg','banner_promo.jpg','banner_ofertas.jpg');
+
+insert into cadastro_local (tipo_estabelecimento,nome_fantasia,fone1,celular,whatsapp,facebook,instagram,website,logo_empresa,banner_promo,banner_ofertas) values ('farmacia','farma mais 2','1234567890','0123456789','7890123456','paginafb','@instaadd','website','logo_farma.jpg','banner_farma.jpg','banner_ofertas_farma.jpg');
+
+insert into cadastro_local (tipo_estabelecimento,nome_fantasia,fone1,celular,whatsapp,facebook,instagram,website,logo_empresa,banner_promo,banner_ofertas) values ('farmacia','farma mais 2','1234567890','0123456789','7890123456','paginafb','@instaadd','website','logo_farma.jpg','banner_farma.jpg','banner_ofertas_farma.jpg');
+insert into cadastro_local (tipo_estabelecimento,nome_fantasia,fone1,celular,whatsapp,facebook,instagram,website,logo_empresa,banner_promo,banner_ofertas) values ('farmacia','farma mais 2','1234567890','0123456789','7890123456','paginafb','@instaadd','website','logo_farma.jpg','banner_farma.jpg','banner_ofertas_farma.jpg');
+insert into cadastro_local (tipo_estabelecimento,nome_fantasia,fone1,celular,whatsapp,facebook,instagram,website,logo_empresa,banner_promo,banner_ofertas) values ('farmacia','farma mais 2','1234567890','0123456789','7890123456','paginafb','@instaadd','website','logo_farma.jpg','banner_farma.jpg','banner_ofertas_farma.jpg');

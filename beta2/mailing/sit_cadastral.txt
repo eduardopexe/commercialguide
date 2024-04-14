@@ -1,0 +1,5 @@
+1;nula;
+2;ativa;
+3;suspensa;
+4;inapta;
+8;baixada;

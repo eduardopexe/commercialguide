@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo</title>
+  <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/themes/base/minified/jquery-ui.min.css" type="text/css" /> 
+</head>
+<body> 
+  <p>
+    <label>Address:</label>
+    <input type='text' name='ward' value='' class='auto'>
+  </p>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.10.1/jquery-ui.min.js"></script>    
+<script type="text/javascript">
+var data = [
+{"label":"Aragorn", "actor":"Viggo Mortensen"},
+{"label":"Arwen", "actor":"Liv Tyler"},
+{"label":"Bilbo Baggins", "actor":"Ian Holm"},
+{"label":"Boromir", "actor":"Sean Bean"},
+{"label":"Frodo Baggins", "actor":"Elijah Wood"},
+{"label":"Gandalf", "actor":"Ian McKellen"},
+{"label":"Gimli", "actor":"John Rhys-Davies"},
+{"label":"Gollum", "actor":"Andy Serkis"},
+{"label":"Legolas", "actor":"Orlando Bloom"},
+{"label":"Meriadoc Merry Brandybuck", "actor":"Dominic Monaghan"},
+{"label":"Peregrin Pippin Took", "actor":"Billy Boyd"},
+{"label":"Samwise Gamgee", "actor":"Sean Astin"}
+];
+$(function() {
+    //autocomplete
+    $(".auto").autocomplete({
+        source: data,
+        minLength: 3,
+        delay: 0,
+    });             
+
+});
+</script>
+</body>
+</html>

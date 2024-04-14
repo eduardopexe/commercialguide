@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>User list | Bootstrap 4</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <script src="http://nicesnippets.com/demo/jquery.searchable-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="custom.css">
+    <script>
+    $(function () {
+    $('[data-command="toggle-search"]').on('click', function(event) {
+        event.preventDefault();
+        $(this).toggleClass('hide-search');
+        
+        if ($(this).hasClass('hide-search')) {        
+            $('.search-input').closest('.row').slideUp(200);
+        }else{   
+            $('.search-input').closest('.row').slideDown(200);
+        }
+    })
+    
+    $('#user-list').searchable({
+        searchField: '#user-list-search',
+        selector: 'li',
+        childSelector: '.col-md-12',
+        show: function( elem ) {
+            elem.slideDown(200);
+        },
+        hide: function( elem ) {
+            elem.slideUp( 200 );
+        }
+    })
+});
+    </script>
+  </head>
+  <body class="bg-info mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 col-12">
+                <div class="card">
+                    <div class="card-header p-0">
+                        <h4 class="m-0">User List</h4>
+                        <ul class="pull-right m-0">
+                            <li class="mt-2"><a href="#" class="hide-search text-secondary" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="row search-div">
+                        <div class="col-md-12 col-12">
+                            <div class="search-input">
+                              <input type="text" class="form-control rounded-0" placeholder="Search user" aria-label="Recipient's username" aria-describedby="basic-addon2" id="user-list-search">
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-group" id="user-list">
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image2.png" alt="Seth Frazier" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">Nick Daniel</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image3.jpg" alt="Jean Myers" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">John Tokio</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image4.jpg" alt="Todd Shelton" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">Xavier Filton</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image5.jpg" alt="Rosemary Porter" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">Abraham Doherty</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image6.jpg" alt="Debbie Schmidt" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">Debbie Scoomin</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item">
+                            <div class="row">
+                                <div class="col-md-12 col-12">
+                                    <div class="row">
+                                        <div class="col-md-4 col-4 user-img text-center pt-1">
+                                            <img src="http://nicesnippets.com/demo/cs-image7.jpg" alt="Glenda Patterson" class="img-responsive img-circle rounded-circle" />
+                                        </div>
+                                        <div class="col-md-8 col-8">
+                                            <h5 class="font-weight-bold mb-1">Glenda Favier</h5>
+                                            <div class="user-detail">
+                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> +91 1234567890</p>
+                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+  </body>
+</html>

@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Guia Local</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <script src="https://nicesnippets.com/demo/jquery.searchable-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body class="bg-info2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 col-12">
+                <div class="card">
+                    <div class="card-header p-0">
+                        <h4 class="m-0">Guia Local</h4>
+                        <ul class="pull-right m-0">
+                            <li class="mt-2"><a href="#" class="hide-search text-secondary" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="row search-div2">
+                        <div class="col-md-12 col-12">
+                            <div class="search-input">
+                              <input type="text" class="form-control rounded-0" placeholder="Search user" aria-label="Recipient's username" aria-describedby="basic-addon2" id="user-list-search">
+                            </div>
+                        </div>
+                    </div>
+					<div id="filter-records"></div>
+		
+					<div id="registros" id="regx"></div>
+					<script type="text/javascript">
+
+  $(document).ready(function(){
+
+
+var getJSON = function(url, callback) {
+
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.responseType = 'json';
+    
+    xhr.onload = function() {
+    
+        var status = xhr.status;
+        
+        if (status == 200) {
+            callback(null, xhr.response);
+        } else {
+            callback(status);
+        }
+    };
+    
+    xhr.send();
+};
+
+getJSON('https://guia.liinkoo.com/api/',  function(err, data2) {
+    
+    if (err != null) {
+        console.error(err);
+    } else {
+        
+//var text = `Date: ${data.id}
+//Time: ${data.nome_fantasia}
+//Unix time: ${data.fone1}`
+    var text ='';
+    $.each(data2, function(key2, val2){
+	   text+= key2 + '--' + val2.nome_fantasia + 'xxx';
+	});
+        console.log(text);
+
+
+    var data3 = [
+{"id":"1","nome_fantasia":"Tiger Nixon","tipo_estabelecimento":"320800","fone1":"61","profile_image":"default_profile.png"},{"id":"2","nome_fantasia":"Garrett Winters","tipo_estabelecimento":"434343","fone1":"63","profile_image":"default_profile.png"},{"id":"3","nome_fantasia":"Ashton Cox","tipo_estabelecimento":"86000","fone1":"66","profile_image":"default_profile.png"},{"id":"4","nome_fantasia":"Cedric Kelly","tipo_estabelecimento":"433060","fone1":"22","profile_image":"default_profile.png"},{"id":"5","nome_fantasia":"Airi Satou","tipo_estabelecimento":"162700","fone1":"33","profile_image":"default_profile.png"},{"id":"6","nome_fantasia":"Brielle Williamson","tipo_estabelecimento":"372000","fone1":"61","profile_image":"default_profile.png"},{"id":"7","nome_fantasia":"Herrod Chandler","tipo_estabelecimento":"137500","fone1":"59","profile_image":"default_profile.png"},{"id":"8","nome_fantasia":"Rhona Davidson","tipo_estabelecimento":"327900","fone1":"55","profile_image":"default_profile.png"},{"id":"9","nome_fantasia":"Colleen Hurst","tipo_estabelecimento":"205500","fone1":"39","profile_image":"default_profile.png"},{"id":"10","nome_fantasia":"Sonya Frost","tipo_estabelecimento":"103600","fone1":"23","profile_image":"default_profile.png"}];
+
+$('#user-list-search').keyup(function(){
+
+            var searchField = $(this).val();
+			if(searchField === '')  {
+				$('#filter-records').html('');
+				return;
+			}
+			
+            var regex = new RegExp(searchField, "i");
+/*            var output = '<div class="row">';
+*/
+            var output = '<ul class="list-group" id="user-list">';
+			
+            var count = 1;
+			  $.each(data2, function(key, val){
+				if ((val.tipo_estabelecimento.search(regex) != -1) || (val.nome_fantasia.search(regex) != -1)) {
+                  output += '                        <li class="list-group-item">';
+                  output += '                            <div class="row">';
+                  output += '                                <div class="col-md-12 col-12">';
+                  output += '                                    <div class="row">';
+                  output += '                                        <div class="col-md-4 col-4 user-img text-center pt-1">';
+                  output += '                                            <img src="' + val.logo_empresa + '" alt="Seth Frazier" class="img-responsive img-circle rounded-circle" />';
+                  output += '                                        </div>';
+                  output += '                                        <div class="col-md-8 col-8">';
+                  output += '                                            <h5 class="font-weight-bold mb-1">'+ val.nome_fantasia +'</h5>';
+                  output += '                                            <div class="user-detail">';
+                  output += '                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> '+ val.fone1 + '</p>';
+                  output += '                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>';
+                  output += '                                            </div>';
+                  output += '                                        </div>';
+                  output += '                                    </div>';
+                  output += '                                </div>';
+                  output += '                            </div>';
+                  output += '                        </li>';				  
+				  if(count%2 == 0){
+/*					output += '</div><div class="row">'
+*/
+				  }
+				  count++;
+				}
+			  });
+			  output += '</ul>';
+			  $('#filter-records').html(output);
+        });
+		
+    }
+}); 		
+  });
+</script>
+					
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+   
+  </body>
+</html>

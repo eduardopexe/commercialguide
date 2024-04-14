@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Guia Local</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ropa+Sans" rel="stylesheet">
+    <script src="http://nicesnippets.com/demo/jquery.searchable-1.0.0.min.js"></script>
+    <link rel="stylesheet" href="custom.css">
+  </head>
+  <body class="bg-info2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 col-12">
+                <div class="card">
+                    <div class="card-header p-0">
+                        <h4 class="m-0">Guia Local</h4>
+                        <ul class="pull-right m-0">
+                            <li class="mt-2"><a href="#" class="hide-search text-secondary" data-command="toggle-search" data-toggle="tooltip" data-placement="top" title="Toggle Search"><i class="fa fa-search"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="row search-div2">
+                        <div class="col-md-12 col-12">
+                            <div class="search-input">
+                              <input type="text" class="form-control rounded-0" placeholder="Search user" aria-label="Recipient's username" aria-describedby="basic-addon2" id="user-list-search">
+                            </div>
+                        </div>
+                    </div>
+					<div id="filter-records"></div>
+					
+<script>
+$.getJSON('http://guia.liinkoo.com/api/', function(data) {
+    // JSON result in `data` variable
+});
+
+</script>
+					<script type="text/javascript">
+  $(document).ready(function(){
+    var data = [
+{"id":"1","employee_name":"Tiger Nixon","employee_salary":"320800","employee_age":"61","profile_image":"default_profile.png"},{"id":"2","employee_name":"Garrett Winters","employee_salary":"434343","employee_age":"63","profile_image":"default_profile.png"},{"id":"3","employee_name":"Ashton Cox","employee_salary":"86000","employee_age":"66","profile_image":"default_profile.png"},{"id":"4","employee_name":"Cedric Kelly","employee_salary":"433060","employee_age":"22","profile_image":"default_profile.png"},{"id":"5","employee_name":"Airi Satou","employee_salary":"162700","employee_age":"33","profile_image":"default_profile.png"},{"id":"6","employee_name":"Brielle Williamson","employee_salary":"372000","employee_age":"61","profile_image":"default_profile.png"},{"id":"7","employee_name":"Herrod Chandler","employee_salary":"137500","employee_age":"59","profile_image":"default_profile.png"},{"id":"8","employee_name":"Rhona Davidson","employee_salary":"327900","employee_age":"55","profile_image":"default_profile.png"},{"id":"9","employee_name":"Colleen Hurst","employee_salary":"205500","employee_age":"39","profile_image":"default_profile.png"},{"id":"10","employee_name":"Sonya Frost","employee_salary":"103600","employee_age":"23","profile_image":"default_profile.png"}];
+
+
+ 
+$('#user-list-search').keyup(function(){
+            var searchField = $(this).val();
+			if(searchField === '')  {
+				$('#filter-records').html('');
+				return;
+			}
+			
+            var regex = new RegExp(searchField, "i");
+/*            var output = '<div class="row">';
+*/
+            var output = '<ul class="list-group" id="user-list">';
+			
+            var count = 1;
+			  $.each(data, function(key, val){
+				if ((val.employee_salary.search(regex) != -1) || (val.employee_name.search(regex) != -1)) {
+                  output += '                        <li class="list-group-item">';
+                  output += '                            <div class="row">';
+                  output += '                                <div class="col-md-12 col-12">';
+                  output += '                                    <div class="row">';
+                  output += '                                        <div class="col-md-4 col-4 user-img text-center pt-1">';
+                  output += '                                            <img src="' + val.profile_image + '" alt="Seth Frazier" class="img-responsive img-circle rounded-circle" />';
+                  output += '                                        </div>';
+                  output += '                                        <div class="col-md-8 col-8">';
+                  output += '                                            <h5 class="font-weight-bold mb-1">'+ val.employee_name +'</h5>';
+                  output += '                                            <div class="user-detail">';
+                  output += '                                                <p class="m-0"><i class="fa fa-phone mr-1" aria-hidden="true"></i> '+ val.employee_salary + '</p>';
+                  output += '                                                <p class="m-0"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> example@gmail.com</p>';
+                  output += '                                            </div>';
+                  output += '                                        </div>';
+                  output += '                                    </div>';
+                  output += '                                </div>';
+                  output += '                            </div>';
+                  output += '                        </li>';				  
+				  if(count%2 == 0){
+/*					output += '</div><div class="row">'
+*/
+				  }
+				  count++;
+				}
+			  });
+			  output += '</ul>';
+			  $('#filter-records').html(output);
+        });
+  });
+</script>
+					
+
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+   
+  </body>
+</html>

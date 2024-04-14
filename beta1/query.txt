@@ -1,0 +1,3 @@
+https://stackoverflow.com/questions/20769299/how-to-pass-variable-to-href-in-javascript
+
+https://stackoverflow.com/questions/979975/how-to-get-the-value-from-the-get-parameters

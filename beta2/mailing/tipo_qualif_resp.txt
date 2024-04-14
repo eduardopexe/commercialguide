@@ -1,0 +1,79 @@
+1;Acionista;Nã
+2;Acionista Controlador;Nã
+3;Acionista Diretor;Nã
+4;Acionista Presidente;Nã
+5;Administrador ;Sim;
+6;Administradora de consóo de Empresas ou Grupo de Empresas;Nã
+7;Comissáo;Nã
+8;Conselheiro de Administraç;Sim;
+9;Curador ;Sim;
+10;Diretor ;Sim;
+11;Interventor ;Sim;
+12;Inventariante ;Sim;
+13;Liquidante ;Sim;
+14;Mã;Sim;
+15;Pai ;Sim;
+16;Presidente ;Sim;
+17;Procurador ;Sim;
+18;Secretáo;Sim;
+19;Síico (Condomío) ;Sim;
+20;Sociedade Consorciada ;Sim;
+21;Sociedade Filiada ;Sim;
+22;Só;Sim;
+23;Só Capitalista ;Sim;
+24;Só Comanditado ;Sim;
+25;Só Comanditáo ;Sim;
+26;Só de Indúa ;Sim;
+27;Só Residente ou Domiciliado no Exterior;Nã
+28;Só-Gerente ;Sim;
+29;Só ou Acionista Incapaz ou Relativamente Incapaz (exceto menor) ;Sim;
+30;Só ou Acionista Menor (Assistido/Representado) ;Sim;
+31;Só Ostensivo ;Sim;
+32;Tabeliã;Sim;
+33;Tesoureiro;Sim;
+34;Titular de Empresa Individual Imobiliáa ;Sim;
+35;Tutor ;Sim;
+36;Gerente-Delegado;Nã
+37;Só Pessoa Juríca Domiciliado no Exterior ;Sim;
+38;Só Pessoa Fíca Residente ou Domiciliado no Exterior ;Sim;
+39;Diplomata ;Sim;
+40;Côl ;Sim;
+41;Representante de Organizaç Internacional ;Sim;
+42;Oficial de Registro ;Sim;
+43;Responsál ;Sim;
+44;Só Participante;Nã
+45;Só Investidor;Nã
+46;Ministro de Estado das Relaçs Exteriores ;Sim;
+47;Só Pessoa Fíca Residente no Brasil ;Sim;
+48;Só Pessoa Juríca Domiciliado no Brasil ;Sim;
+49;Só-Administrador ;Sim;
+50;Empresáo ;Sim;
+51;Candidato a Cargo Políco Eletivo ;Sim;
+52;Só com Capital ;Sim;
+53;Só sem Capital ;Sim;
+54;Fundador ;Sim;
+55;Só Comanditado Residente no Exterior;Sim;
+56;Só Comanditáo Pessoa Fíca Residente no Exterior;Sim;
+57;Só Comanditáo Pessoa Juríca Domiciliado no Exterior;Sim;
+58;Só Comanditáo Incapaz;Sim;
+59;Produtor Rural;Sim;
+60;Côl Honoráo;Sim;
+61;Responsál Indigena;Sim;
+62;Representante das Instituiçs Extraterritoriais;Sim;
+63;Cotas em Tesouraria;Sim;
+64;Administrador Judicial;Sim;
+65;Titular Pessoa Fíca Residente ou Domiciliado no Brasil;Sim;
+66;Titular Pessoa Fíca Residente ou Domiciliado no Exterior;Sim;
+67;Titular Pessoa Fíca Incapaz ou Relativamente Incapaz (exceto menor);Sim;
+68;Titular Pessoa Fíca Menor (Assistido/Representado);Sim;
+69;Beneficiáo Final;Nã
+70;Administrador Residente ou Domiciliado no Exterior;Sim;
+71;Conselheiro de Administraç Residente ou Domiciliado no Exterior;Sim;
+72;Diretor Residente ou Domiciliado no Exterior;Sim;
+73;Presidente Residente ou Domiciliado no Exterior;Sim;
+74;Só-Administrador Residente ou Domiciliado no Exterior;Sim;
+75;Fundador Residente ou Domiciliado no Exterior;Sim;
+76;Protetor;Sim;
+77;Vice-Presidente;Sim;
+78;Titular Pessoa Juríca Domiciliada no Brasil;Sim;
+79;Titular Pessoa Juríca Domiciliada no Exterior;Sim;
